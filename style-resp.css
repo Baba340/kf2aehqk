@@ -1,0 +1,435 @@
+@media (max-width: 800px) {
+
+  /* 共通CSS */
+  .section-title h1 {
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    font-size: 25px;
+    padding: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 15px;
+    margin-top: 2px;
+  }
+
+
+  /* 画像切り替え */
+
+  .top-mountain-one {display: none;}
+  .top-mountain-two {display: none;}
+  .top-mountain-one-resp {display: block;}
+  .top-mountain-two-resp {display: block;}
+
+  .threedimention-mountain-one {display: none;}
+  .threedimention-mountain-two {display: none;}
+  .threedimention-mountain-one-resp {display: block;}
+  .threedimention-mountain-two-resp {display: block;}
+
+  .sea1 {display: none;}
+  .sea2 {display: none;}
+  .sea3 {display: none;}
+  .sea4 {display: none;}
+  .sea1-resp {display: block;}
+  .sea2-resp {display: block;}
+  .sea3-resp {display: block;}
+  .sea4-resp {display: block;}
+
+  .skyimage {display: none;}
+  .skyimage-resp {display: block;}
+
+  /* プログレスバー */
+
+  #container {
+    width: 40vw;
+    height: 40vw;
+    position: fixed;
+    top: calc(45vh - 20vw);
+    left: calc(50vw - 20vw);
+    z-index: 100;
+  }
+
+  /* ヘッダー */
+
+  .header {
+    z-index: 5;
+    opacity: 1;
+  }
+
+  .header-inner {
+    height: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+
+    z-index: 7;
+  }
+
+  .header-navigations {
+    display: none;
+  }
+
+  .notice-board {
+    z-index: 6;
+    background-color: #2c78d6;
+    display: block;
+    width: calc(100vw - 100px);
+    height: 50px;
+    white-space: nowrap;
+    border-right: solid 2px #fff;
+    position: relative;
+  }
+
+  .notice-board-text {
+    position: absolute;
+    top: 20px;
+    padding-left: 5px;
+    color: #ffffff;
+    transform: translateX(calc(100vw - 100px));
+    animation: notice-board-animation 20s linear infinite;
+  }
+
+  @keyframes notice-board-animation {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .hamburger-menu-button {
+    z-index: 7;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: #ff412d;
+  }
+  
+  .hamburger-menu-button span {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #000000;
+    transition: all 0.5s;
+    border-radius: 4px;
+  }
+
+  .open.hamburger-menu-button span:nth-child(1) {
+    transform: translateY(8px) rotate(-315deg);
+  }
+  .open.hamburger-menu-button span:nth-child(2) {
+    opacity: 0;
+  }
+  .open.hamburger-menu-button span:nth-child(3) {
+    transform: translateY(-8px) rotate(315deg);
+  }
+
+  .hamburger-menu-button span:nth-child(1) {top: 17px;}
+  .hamburger-menu-button span:nth-child(2) {top: 25px;}
+  .hamburger-menu-button span:nth-child(3) {top: 33px;}
+
+  .navigations-resp {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #F5C615;
+    opacity: 0.95;
+    color: #fff;
+    width: calc(calc(100vw + 100vh) / 1.41421356);
+    height: calc(calc(calc(100vw + 100vh) / 1.41421356) + 200px );
+    transform-origin: left top;
+    transform: rotate(45deg) translateY(calc(calc(calc(200vw + 100vh) / -1.41421356) - 200px));
+  }
+
+  .navigations-resp.open {
+    animation: navigations-slide-down 1s ease forwards;
+  }
+
+  .navigations-resp.closed {
+    animation: navigations-slide-up 1s ease forwards;
+  }
+
+  @keyframes navigations-slide-down {
+    0% {
+      transform: rotate(45deg) translateY(calc(calc(calc(200vw + 100vh) / -1.41421356) - 200px ));
+    }
+    50% {
+      transform: rotate(45deg) translateX(0px) translateY(calc(calc(100vw / -1.41421356) - 100px));
+    }
+    100% {
+      transform: rotate(45deg) translateX(0px) translateY(calc(calc(100vw / -1.41421356) - 200px ));
+    }
+  }
+
+  @keyframes navigations-slide-up {
+    0% {
+      transform: rotate(45deg) translateX(0px) translateY(calc(calc(100vw / -1.41421356) - 200px));
+    }
+    50% {
+      transform: rotate(45deg) translateX(0px) translateY(calc(calc(100vw / -1.41421356) - 100px));
+    }
+    100% {
+      transform: rotate(45deg) translateY(calc(calc(calc(200vw + 100vh) / -1.41421356) - 200px));
+    }
+  }
+
+  .navigations-resp ul {
+    position: absolute;
+    bottom: 0px;
+    left: calc(100vh / 1.41421356);
+    width: 100vw;
+    transform-origin: left bottom;
+    transform: rotate(-45deg);
+  }
+
+  .navigations-resp ul li {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:
+      1px 1px 0 #000000, -1px -1px 0 #000000,
+      -1px 1px 0 #000000, 1px -1px 0 #000000,
+      0px 1px 0 #000000,  0 -1px 0 #000000,
+      -1px 0 0 #000000, 1px 0 0 #000000;
+  }
+
+  .navigations-resp ul li:nth-last-child(1) {
+    margin-bottom: 200px;
+  }
+
+  .navigations-resp ul li a {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .navigations-resp .navigations-jpn {
+    font-size: 15px;
+    padding-left: 5px;
+    padding-bottom: 3px;
+  }
+
+  /* メイン */
+
+  .main {
+    padding-top: 50px;
+  }
+
+  /* TOPトップ */
+
+  .top {
+    height: calc(90vh - 50px);
+    background-size: 50vw;
+    padding-top: 18vh;
+  }
+  
+  .top-title .top-maintitle {
+    width: 100%;
+  }
+
+  .top-title .top-subtitle {
+    font-size: 4.5vw;
+    width: 100%;
+    text-shadow:
+      1px 1px 0 #000000, -1px -1px 0 #000000,
+      -1px 1px 0 #000000, 1px -1px 0 #000000,
+      0px 1px 0 #000000,  0 -1px 0 #000000,
+      -1px 0 0 #000000, 1px 0 0 #000000;
+  }
+  .top-title .top-yearpop {
+    width: 15%;
+    position: absolute;
+    right: 11%;
+    top: 15%;
+  }
+
+  .top-title .top-scrolldown span{
+    position: absolute;
+    bottom: -50px;
+    font-size: 14px;
+    padding: 7px;
+  }
+
+  .top-moon {
+    left: 15vw;
+    bottom: calc(calc(100vw * 32) / 59);
+    width: 14vw;
+  }
+
+  .top-cloud1 {
+    width:40vw;
+  }
+  
+  .top-cloud2 {
+    width: 27vw;
+  }
+
+  .top-cloud3 {
+    width: 35vw;
+  }
+
+  /* SLOGANスローガン */
+
+  .slogan-main {
+    display: block;
+    max-width: 90%;
+  }
+
+  .slogan-shodo {
+    width: 70%;
+    margin: 0 0 0 auto;
+  }
+
+  .slogan-shodo .slogan-shodo-bg {
+    bottom: 0;
+    left: 0;
+  }
+
+  .slogan-message {
+    width: 90%;
+    background-size: 100px;
+    padding: 30px;
+    margin-top: -80px;
+  }
+
+  .slogan-message .slogan-message-title {
+    display: inline-block;
+    background: linear-gradient(transparent 65%, rgba(35,120,245,0.7) 65%);
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .slogan-message .slogan-message-text {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+
+  /* 海面 */
+
+  .seasurface {
+    background-color: #ebecf0;
+    position: relative;
+    height: calc(calc(100vw/10.217)*3);
+  }
+
+  .sea4-resp {
+    z-index: 0;
+    bottom: calc(calc(100vw/10.217)*0.99);
+    left: 0;
+    width: 100vw;
+    position: absolute;
+  }
+
+  .sea3-resp {
+    z-index: 0;
+    bottom: calc(calc(100vw/10.217)*0.66);
+    left: 0;
+    width: 100vw;
+    position: absolute;
+  }
+
+  .sea2-resp {
+    z-index: 0;
+    bottom: calc(calc(100vw/10.217)*0.33);
+    left: 0;
+    width: 100vw;
+    position: absolute;
+  }
+
+  .sea1-resp {
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    position: absolute;
+  }
+
+  /* MESSAGE巻頭言 */
+
+  .message-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 60%;
+  }
+
+  .message-list li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .modal {
+    margin-top: 50px;
+  }
+
+  .message-modal {
+    padding: 10px;
+  }
+
+  .message-modal .modal-header {
+    font-size: 20px;
+    border-left: solid 6px #035bf5;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .message-modal .modal-text {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  /* PROGRAM企画紹介 */
+
+  .program {
+    /* アンカーリンクのずれ補正 */
+    padding-top: 50px;
+    margin-top: -50px;  
+  }
+
+  .program-main {
+    font-size: 13px;
+  }
+
+  /* ARTWORK作品 */
+
+  .artwork {
+    background-size: 50vw;
+  }
+
+  .artwork-main {
+    font-size: 13px;
+  }
+
+  .threedimention-mountain {
+    height: calc(calc(100vw*32)/59);
+  }
+
+  /* フッター */
+
+  .footer-school-logo {
+    width: 50px;
+  }
+
+  .footer-school-name {
+    font-size: 20px;
+    border-left: solid 2px #000000;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+}
