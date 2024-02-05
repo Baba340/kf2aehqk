@@ -41,6 +41,8 @@ window.setTimeout(() => {
   progress_bar.style.display = "none";
 
   //gsap
+  const header = document.querySelector(".header")
+  const toppage = document.querySelector(".top");
   const mountain = document.querySelector(".top-mountain");
   const moon = document.querySelector(".top-moon");
   const cloud1 = document.querySelector(".top-cloud1");
@@ -53,7 +55,10 @@ window.setTimeout(() => {
 
   const tl = gsap.timeline();
 
-  tl.fromTo(mountain, 1, { y:"30vh" }, { y:"0vh", ease: Power2.easeInOut })
+  tl
+  .fromTo(toppage, 1, { y:"50vh" }, { y:"0vh", ease: Power2.easeInOut })
+  .fromTo(header, 1, { y:"-10vh" }, { y:"0vh", ease: Power2.easeInOut }, "-=1")
+  .fromTo(mountain, 1, { y:"30vh" }, { y:"0vh", ease: Power2.easeInOut })
   .fromTo(moon, 1, { y:"50vh" }, { y:"0vh", ease: Power2.easeInOut }, "-=0.5")
   .fromTo(cloud1, 2, { x:"-20vw", opacity:0 }, { x:"0", opacity:1, ease: Power2.easeInOut }, "-=1")
   .fromTo(cloud2, 2, { x:"20vw", opacity:0 }, { x:"0", opacity:1, ease: Power2.easeInOut }, "-=2")
@@ -90,6 +95,7 @@ window.setTimeout(() => {
   });
 
 }, 4000);
+
 
 
 //rellax.js
