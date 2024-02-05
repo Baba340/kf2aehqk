@@ -73,15 +73,10 @@ window.setTimeout(() => {
     reset: false, 
     distance: "50px"
   });
-  ScrollReveal().reveal('.section-title, .slogan-shodo-bg', {
+  ScrollReveal().reveal('.section-title, .slogan-shodo-bg, .slogan-shodo-img', {
     delay: 500,
     duration: 2000,
     origin: "bottom" 
-  });
-  ScrollReveal().reveal('.slogan-shodo-img', {
-    delay: 500,
-    duration: 2000,
-    origin: "right" 
   });
   ScrollReveal().reveal('.slogan-message, .uncho, .kancho, .somu', {
     delay: 500,
