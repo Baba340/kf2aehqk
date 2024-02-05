@@ -526,6 +526,7 @@ html {
 
 .modal {
   margin-top: 90px;
+  animation: fadein 0.5s;
 }
 
 .message-modal {
