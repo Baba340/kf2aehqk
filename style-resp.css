@@ -316,6 +316,18 @@
     margin-top: 10px;
   }
 
+  .uncho {
+    order: 2;
+  }
+
+  .kancho {
+    order: 1;
+  }
+
+  .somu {
+    order: 3;
+  }
+
   /* 海面 */
 
   .seasurface {
@@ -403,6 +415,18 @@
     font-size: 13px;
   }
 
+  .programs li h1 {
+    font-size: 20px;
+  }
+  
+  .programs li h2 {
+    font-size: 15px;
+  }
+
+  .program-data li h1 {
+    font-size: 14px;
+  }
+
   /* ARTWORK作品 */
 
   .artwork {
@@ -411,6 +435,11 @@
 
   .artwork-main {
     font-size: 13px;
+  }
+
+  .artwork-main .container {
+    padding: 10px;
+    gap: 5px 5px;
   }
 
   .threedimention-mountain {
