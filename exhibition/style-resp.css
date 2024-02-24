@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+@media (max-width: 800px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  /* ヘッダー */
+
+  /* 高さがwidth(長方形部分)+border-right(三角形部分)、幅がborder-bottom */
+
+  .triangle1 {
+    width: 20vw;
+    height: 0;
+    border-top: none;
+    border-bottom: 100vw solid#31da99;
+    border-left: none;
+    border-right: 17vw solid transparent;
+    transform: translateY(-100vw) rotate(90deg);
+    transform-origin: bottom left;
+    position: absolute;
+    top: -100vw;
+  }
+  
+  .triangle2 {
+    width: 42vw;
+    height: 0;
+    border-top: none;
+    border-bottom: 100vw solid #a4ffc6;
+    border-left: none;
+    border-right: 18vw solid transparent;
+    transform: translateY(-100vw) rotate(90deg);
+    transform-origin: bottom left;
+    position: absolute;
+    top: -100vw;
+  }
+
+  .title-outer {
+    margin-top: 23vw;
+  }
+
+  .title {
+    font-size: 13vw;
+    -webkit-text-stroke: 0.5vw #000;
+  }
+
+  .backbutton {
+    top: 5px;
+    left: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .backbutton img {
+    width: 15px;
+  }
+  
+  .backbutton p {
+    padding-top: 1px;
+    font-size: 15px;
+  }
+
+  /* メイン */
+
+  .timesche {
+    margin-top: 10px;
+  }
+  
+  .timesche p {
+    font-size: 5vw;
+  }
+  
+  .program-data {
+    margin-top: 5px;
+  }
+  
+  .program-data div {
+    width: 35vw;
+    border-radius: 10px;
+    border: solid 2px #000;
+    padding: 2vw;
+  }
+  
+  .program-data div h1 {
+    font-size: 5vw;
+  }
+  
+  .program-data div img {
+    margin-left: 2vw;
+    padding-bottom: 0.3vw;
+    width: 5vw;
+  }
+
+  main {
+    padding-top: 15vw;
+  }
+
+  .subtitle-outer {
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    border-left: 5px solid #31da99;
+  }
+
+  .boxes ul {
+    column-gap: 5%;
+  }
+  
+  .boxes ul li {
+    flex-basis: 47.5%;
+    margin-bottom: 3%;
+  }
+
+  .boxes ul li .image-outer {
+    width: 100%;
+    border: 3px black solid;
+    padding: 3px;
+  }
+
+  .boxes ul li .image-outer img {
+    width: 100%;
+    height: 20vw;
+  }
+
+  .boxes ul li .tagname {
+    font-size: 18px;
+    margin-top: 2%;
+  }
+
+  .logo {
+    width: 100%;
+    border: 5px black solid;
+    padding: 5px;
+  }
+
+  .modal-tagname {
+    margin-top: 15px;
+    font-size: 25px;
+  }
+
+  .modal-mainname {
+    font-size: 23px;
+  }
+  
+  .location img {
+    width: 13px;
+    margin-right: 5px;
+  }
+  
+  .location p {
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .modal-time {
+    padding: 15px;
+  }
+  
+  .modal-time h1 {
+    text-align: center;
+  }
+  
+  .modal-time h1 div {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    border-left: solid 6px #31da99;
+    border-right: solid 6px #31da99;
+    padding: 5px;
+  }
+  
+  .modal-time h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .modal-time p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 2px;
+  }
+
+}
