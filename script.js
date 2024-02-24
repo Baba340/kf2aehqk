@@ -1,3 +1,8 @@
+
+// ブラウザの戻る・進むボタンでページが開かれている場合を除く
+if(performance.getEntriesByType("navigation")[0].type === 'back_forward'){
+}else{
+
 window.scroll({top: 0});
 
 // ローディング処理
@@ -56,8 +61,6 @@ window.setTimeout(() => {
   const tl = gsap.timeline();
 
   tl
-  .fromTo(toppage, 1, { y:"50vh" }, { y:"0vh", ease: Power2.easeInOut })
-  .fromTo(header, 1, { y:"-10vh" }, { y:"0vh", ease: Power2.easeInOut }, "-=1")
   .fromTo(mountain, 1, { y:"30vh" }, { y:"0vh", ease: Power2.easeInOut })
   .fromTo(moon, 1, { y:"50vh" }, { y:"0vh", ease: Power2.easeInOut }, "-=0.5")
   .fromTo(cloud1, 2, { x:"-20vw", opacity:0 }, { x:"0", opacity:1, ease: Power2.easeInOut }, "-=1")
@@ -73,7 +76,7 @@ window.setTimeout(() => {
     reset: false, 
     distance: "50px"
   });
-  ScrollReveal().reveal('.section-title, .slogan-shodo-bg, .slogan-shodo-img', {
+  ScrollReveal().reveal('.section-title, .slogan-shodo-bg, .slogan-shodo-img, .artwork-main, .program-data-left', {
     delay: 500,
     duration: 2000,
     origin: "bottom" 
@@ -88,8 +91,20 @@ window.setTimeout(() => {
     duration: 1000,
     origin: "bottom" 
   });
+  ScrollReveal().reveal('.program-left', {
+    delay: 500,
+    duration: 1000,
+    origin: "right" 
+  });
+  ScrollReveal().reveal('.program-right', {
+    delay: 500,
+    duration: 1000,
+    origin: "left" 
+  });
 
 }, 4000);
+
+}
 
 
 
