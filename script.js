@@ -57,6 +57,7 @@ window.setTimeout(() => {
   const yearpop = document.querySelector(".top-yearpop");
   const maintitle = document.querySelector(".top-maintitle");
   const scrolldown = document.querySelector(".top-scrolldown");
+  const topdate = document.querySelector(".top-data-outer");
 
   const tl = gsap.timeline();
 
@@ -68,6 +69,7 @@ window.setTimeout(() => {
   .fromTo(cloud3, 2, { x:"-20vw", opacity:0 }, { x:"0", opacity:1, ease: Power2.easeInOut }, "-=2")
   .fromTo(maintitle, 1.5, { y:"10vh", opacity:0 }, { y:"0", opacity:1, ease: Power2.easeInOut }, "-=3")
   .fromTo(subtitle, 1, { y:"5vw", opacity:0 }, { y:"0", opacity:1, ease: Power2.easeInOut }, "-=2")
+  .fromTo(topdate, 1, { y:"5vw", opacity:0 }, { y:"0", opacity:1, ease: Power2.easeInOut }, "-=2")
   .fromTo(yearpop, 1, { opacity:0 }, { opacity:1, ease: Power2.easeInOut }, "-=1")
   .fromTo(scrolldown, 1, { opacity:0 }, { opacity:1, ease: Power2.easeInOut }, "-=0.5");
 
