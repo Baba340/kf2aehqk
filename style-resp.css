@@ -233,6 +233,28 @@
     background-size: 50vw;
     padding-top: 18vh;
   }
+
+  .top-data-outer {
+    top: -18vw;
+  }
+  
+  .top-data-outer::before {
+    top: 5%;
+    left: 2%;
+    width: 96%;
+    height: 90%;
+  }
+  
+  .top-date {
+    font-weight: bold;
+    text-shadow:
+      1px 1px 0 #000000, -1px -1px 0 #000000,
+      -1px 1px 0 #000000, 1px -1px 0 #000000,
+      0px 1px 0 #000000,  0 -1px 0 #000000,
+      -1px 0 0 #000000, 1px 0 0 #000000;  
+    font-size: 4vw;
+    padding: 3vw;
+  }
   
   .top-title .top-maintitle {
     width: 100%;
@@ -431,6 +453,9 @@
 
   .artwork {
     background-size: 50vw;
+    /* アンカーリンクのずれ補正 */
+    padding-top: 50px;
+    margin-top: -50px;  
   }
 
   .artwork-main {
