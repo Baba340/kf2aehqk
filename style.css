@@ -190,6 +190,44 @@ html {
   }
 }
 
+.top-data-outer {
+  background-color: #fff;
+  position: absolute;
+  /* left: 50%;
+  transform: translate(-50%,0); */
+  top: -6vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: fit-content;
+}
+
+.top-data-outer::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  width: 96%;
+  height: 90%;
+  background-color: #67bbf5;
+}
+
+.top-date {
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  text-shadow:
+    2px 2px 0 #000000, -2px -2px 0 #000000,
+    -2px 2px 0 #000000, 2px -2px 0 #000000,
+    0px 2px 0 #000000,  0 -2px 0 #000000,
+    -2px 0 0 #000000, 2px 0 0 #000000;  
+  font-size: 1.5vw;
+  padding: 1vw;
+}
+
 .top-title .top-maintitle {
   width: 70%;
 }
@@ -317,6 +355,8 @@ html {
 .top-cloud3 {
   margin-left: 10vw;
   width: 20vw;
+  position: relative;
+  z-index: -3;
 }
 
 /* SLOGANスローガン */
@@ -706,6 +746,9 @@ html {
   position: relative;
   background-image: url(images/top-background.png);
   background-size: 15vw;
+  /* アンカーリンクのずれ補正 */
+  padding-top: 90px;
+  margin-top: -90px;
 }
 
 .artwork .section-title {
@@ -760,6 +803,7 @@ html {
 .north6 { grid-area: north6; }
 
 .artwork-main .container img {
+  cursor: pointer;
   width: 100%;
   height: 100%;
   object-fit: cover;
